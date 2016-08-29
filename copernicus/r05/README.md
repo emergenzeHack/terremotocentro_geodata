@@ -1,8 +1,8 @@
-**Dati derivati da Copernicus**
+**Dati derivati da Copernicus EMS**
+
+Copernicus Emergency Management Service (© 2016 European Union), [[EMRS177] Earthquake in Central Italy](http://emergency.copernicus.eu/EMSR177)
 
 _Release: r05 - Version: v1 - Delivered: 2016-08-27 21:04_
-
-[Link di riferimento](http://emergency.copernicus.eu/mapping/list-of-components/EMSR177)
 
 Dati contenuti nella directory principale
 
