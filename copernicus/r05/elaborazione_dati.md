@@ -53,7 +53,6 @@ Anche questi servizi sono ospitati nel server di Openstreetmap Italia e sono uti
 ## Note
 
 Il giorno 30 agosto 2016 Copernicus EMS ha aggiornato 4 mappe:
-Ad es. oggi hanno aggiornato 4 mappe:
 
 * [Capodacqua Aerial: Grading Map](http://emergency.copernicus.eu/mapping/ems-product-component/EMSR177_14CAPODACQUAAERIAL_GRADING_OVERVIEW/2)
 * [Arquata del Tronto Aerial: Grading Map](http://emergency.copernicus.eu/mapping/ems-product-component/EMSR177_19ARQUATADELTRONTOAERIAL_GRADING_OVERVIEW/3)
