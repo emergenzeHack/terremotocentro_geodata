@@ -20,7 +20,7 @@ Lo shapefile [settlements_merged](./shape_file) è stato derivato da [Alessandro
 
 Con questa visione, e in conformità alla [policy di Copernicus EMS](http://emergency.copernicus.eu/mapping/ems/cite-copernicus-ems-mapping-portal), che dichiara che "_the information produced by the Copernicus Emergency Management Service shall be made available to the public on a full, open and free-of-charge basis_", i dati contenuti nello shapefile settlements_merged e tutti i suoi derivati (kml, geojson, ...) sono rilasciati con licenza [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) (CC-BY-SA).
 
-In particolare, sono stati scaricati i dati vettoriali relativi alla valutazione del danno per le 26 mappe prodotte. Nel file [mapsList.csv](./mapsList.csv) si trovano elencati i nomi delle mappe con i link al download diretto del file zip contentente ciascuno shapefile.
+In particolare, sono stati scaricati i dati vettoriali relativi alla valutazione del danno per le 26 mappe prodotte. Nel file [mapsList.csv](./mapsList.csv) si trovano elencati i nomi delle mappe più recenti e aggiornate con i link al download diretto del file zip contentente ciascuno shapefile.
 
 I file contengono valutazioni dei danni per vari elementi, tra cui edifici, strade, ferrovie, e anche informazioni puntuali su crolli, strade interrotte e sulla localizzazione di campi di soccorso e tende. *Nel file settlements_merged sono inclusi solamente i dati relativi alla valutazione dei danni sugli edifici*.
 
@@ -60,3 +60,5 @@ Il giorno 30 agosto 2016 Copernicus EMS ha aggiornato 4 mappe:
 * [Amatrice Aerial: Grading Map](http://emergency.copernicus.eu/mapping/ems-product-component/EMSR177_20AMATRICEAERIAL_GRADING_OVERVIEW/2)
 
 Tali aggiornamenti non sono stati ancora inclusi nei prodotti e servizi descritti in questo documento.
+
+Nel file [mapsList_notYetIncluded.csv](./mapsList_notYetIncluded.csv) è contenuta la lista dei layer da aggiornare, con link alla pagina informativa della mappa, all'URL per il download dello zip con i vettoriali e all'URL per ildonwload del GeoTiff a 300 dpi.
