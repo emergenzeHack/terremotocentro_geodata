@@ -16,21 +16,24 @@ Tali informazioni sono distribuite attraverso dei file vettoriali in formato sha
 
 ## Dati vettoriali
 
-Lo shapefile [settlements_merged](./shape_file) è stato derivato da [Alessandro Sarretta](https://twitter.com/alesarrett) dai dati pubblicati da Copernicus EMS. Lo scopo principale è di rendere disponibile aggregato e nel modo più aperto ed immediato possibile le informazioni relative alla valutazione del danno del terremoto, e di favorire l'inserimento di tali informazioni in Openstreetmap.
+Gli shapefile contenuti nella cartella [shape_file](./shape_file) sono stati derivati da [Alessandro Sarretta](https://twitter.com/alesarrett) dai dati pubblicati da [Copernicus EMS](http://emergency.copernicus.eu/mapping/list-of-components/EMSR177). Lo scopo principale è di rendere disponibile aggregato e nel modo più aperto ed immediato possibile le informazioni relative alla valutazione del danno del terremoto, e di favorire l'inserimento di tali informazioni in Openstreetmap.
 
-Con questa visione, e in conformità alla [policy di Copernicus EMS](http://emergency.copernicus.eu/mapping/ems/cite-copernicus-ems-mapping-portal), che dichiara che "_the information produced by the Copernicus Emergency Management Service shall be made available to the public on a full, open and free-of-charge basis_", i dati contenuti nello shapefile settlements_merged e tutti i suoi derivati (kml, geojson, ...) sono rilasciati con licenza [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) (CC-BY-SA).
+Con questa visione, e in conformità alla [policy di Copernicus EMS](http://emergency.copernicus.eu/mapping/ems/cite-copernicus-ems-mapping-portal), che dichiara che "_the information produced by the Copernicus Emergency Management Service shall be made available to the public on a full, open and free-of-charge basis_", i dati contenuti negli shapefile e tutti i loro derivati (kml, geojson, ...) sono rilasciati con licenza [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) (CC-BY-SA).
 
-In particolare, sono stati scaricati i dati vettoriali relativi alla valutazione del danno per le 26 mappe prodotte. Nel file [mapsList.csv](./mapsList.csv) si trovano elencati i nomi delle mappe più recenti e aggiornate con i link al download diretto del file zip contentente ciascuno shapefile.
+In particolare, sono stati scaricati i dati vettoriali relativi alla valutazione del danno per le 26 mappe prodotte. Nel file [mapsList.csv](./mapsList.csv) si trovano elencati i nomi di tutte le mappe più recenti e aggiornate con i link al download diretto del file zip contentente ciascuno shapefile.
 
-I file contengono valutazioni dei danni per vari elementi, tra cui edifici, strade, ferrovie, e anche informazioni puntuali su crolli, strade interrotte e sulla localizzazione di campi di soccorso e tende. *Nel file settlements_merged sono inclusi solamente i dati relativi alla valutazione dei danni sugli edifici*.
+I file contengono valutazioni dei danni per vari elementi, tra cui edifici, strade, ferrovie, e anche informazioni puntuali su crolli, strade interrotte e sulla localizzazione di campi di soccorso e tende. *Nei file contenuti nella cartella [shape_file](./shape_file) sono inclusi solamente i dati relativi alla valutazione dei danni sugli edifici*.
 
-I file vettoriali sono stati elaborati in [QGIS](http://qgis.org) e uniti in un singolo shapefile tramite il comando "Merge vector layers".
+I file vettoriali sono stati elaborati in [QGIS](http://qgis.org) e uniti in due shapefile tramite il comando "Merge vector layers":
 
-Sono stati creati 2 file di stile, uno per visualizzare i dati tematizzati in QGIS ([_settlements_merged.qml_]() e uno in formato standard OGC [Style Layer Descriptor](http://www.opengeospatial.org/standards/sld) ([_settlements_merged.sld_].
+* il file **settlementsPoly_merged** contiene i dati derivati dalle immagini a scala minore (riquadri più grandi nella figura di nquadramento) e ricopre tutta la zona.
+* il file **settlementsPoly_aerial_merged** contiene i dati derivati dalle immagini aeree a più alta risoluzione effettuate in corrispondenza dei centri abitati (riquadri piccoli nella figura di inquadramento). Questo file è stato incluso perché in alcuni centri abitati le valutazioni sono diverse rispetto a quelle contenute nel file precedente.
 
-Tutti i file sono nel sistema di coordinate WGS 84 / UTM zone 33 N ([EPSG:32633](http://spatialreference.org/ref/epsg/32633/)), tranne due: _Accumoli Aerial: Grading Map_ e _Sant'Angelo Aerial: Grading Map_. Poiché davano dei problemi nell'operazione di merge e le valutazione sono incluse da altre mappe a scala minore, per ora non sono stati inclusi.
+Sono stati creati inoltre 2 file di stile, uno per visualizzare i dati tematizzati in QGIS ([_settlementsPoly.qml_](./shape_file/settlementsPoly.qml) e uno in formato standard OGC [Style Layer Descriptor](http://www.opengeospatial.org/standards/sld) [_settlementsPoly.sld_](./shape_file/settlementsPoly.sld).
 
-Infine, il file è stato reso disponibile da Openstreetmap Italia tramite sevizio standard WMS a [questo link](http://osmit3.wmflabs.org/cgi-bin/qgis_mapserv.fcgi?map=/srv/Copernicus/settlements_grading.qgs&SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3), per poter essere utilizzato ad esempio in [questo task di mappatura di Openstreetmap](http://osmit-tm.wmflabs.org/project/15).
+Tutti i file sono nel sistema di coordinate WGS 84 / UTM zone 33 N ([EPSG:32633](http://spatialreference.org/ref/epsg/32633/)), tranne _Accumoli Aerial: Grading Map_; poiché dava dei problemi nell'operazione di merge e le valutazione sono incluse da una mappa a scala minore, per ora non è stata inclusa.
+
+Infine, il file è stato reso disponibile da Openstreetmap Italia tramite sevizio standard WMS a [questo link](http://osmit3.wmflabs.org/cgi-bin/qgis_mapserv.fcgi?map=/srv/Copernicus/settlements_grading.qgs&SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3), per poter essere utilizzato in [questo task di mappatura di Openstreetmap](http://osmit-tm.wmflabs.org/project/15).
 
 Nella figura qui sotto un'immagine di esempio con in alto la zona di Amatrice con sfondo Openstreetmap e sovrapposto il WMS con lo shapefile settlements_merged, in basso la stessa zona nella mappa di Copernicus EMS.
 
@@ -52,13 +55,6 @@ Anche questi servizi sono ospitati nel server di Openstreetmap Italia e sono uti
 
 ## Note
 
-Il giorno 30 agosto 2016 Copernicus EMS ha aggiornato 4 mappe:
+Il giorno 30 e 31 agosto 2016 Copernicus EMS ha aggiornato varie mappe, elencate nel file [mapsList_notYetIncluded.csv](./mapsList_notYetIncluded.csv).
 
-* [Capodacqua Aerial: Grading Map](http://emergency.copernicus.eu/mapping/ems-product-component/EMSR177_14CAPODACQUAAERIAL_GRADING_OVERVIEW/2)
-* [Arquata del Tronto Aerial: Grading Map](http://emergency.copernicus.eu/mapping/ems-product-component/EMSR177_19ARQUATADELTRONTOAERIAL_GRADING_OVERVIEW/3)
-* [Sant'Angelo Aerial: Grading Map](http://emergency.copernicus.eu/mapping/ems-product-component/EMSR177_26SANTANGELOAERIAL_GRADING_OVERVIEW/2)
-* [Amatrice Aerial: Grading Map](http://emergency.copernicus.eu/mapping/ems-product-component/EMSR177_20AMATRICEAERIAL_GRADING_OVERVIEW/2)
-
-Tali aggiornamenti non sono stati ancora inclusi nei prodotti e servizi descritti in questo documento.
-
-Nel file [mapsList_notYetIncluded.csv](./mapsList_notYetIncluded.csv) è contenuta la lista dei layer da aggiornare, con link alla pagina informativa della mappa, all'URL per il download dello zip con i vettoriali e all'URL per ildonwload del GeoTiff a 300 dpi.
+Tali aggiornamenti non sono stati ancora inclusi nei WMS resi disponibili nel server di Openstreetmap Italia.
