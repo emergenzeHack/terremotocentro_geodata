@@ -16,7 +16,7 @@ La valutazione è stata effettuata secondo le seguenti classi:
 
 ![Legenda settlements_poly_grading](./vector_data/settlements_poly_grading_legend.png)
 
-Il layer *settlements_poly_grading_merged.shp* è stato aggregato (operazione *merge* effettuata in ambiente QGIS 2.16) a partire dai layers contenuti nel file [*shapefileList.txt*](./vector_data/shapefile.txt), tutti scaricati dalla pagina http://emergency.copernicus.eu/EMSR190.
+Il layer *settlements_poly_grading_merged.shp* è stato aggregato (operazione *merge* effettuata in ambiente QGIS 2.16) a partire dai layers contenuti nel file [*shapefileList.txt*](./vector_data/shapefileList.txt), tutti scaricati dalla pagina http://emergency.copernicus.eu/EMSR190.
 
 All'interno della stessa cartella sono anche contenuti dei file di stile utilizzabili in QGIS (*settlements_poly_grading.qml*) e in servizi WMS (*settlements_poly_grading.sld*).
 
