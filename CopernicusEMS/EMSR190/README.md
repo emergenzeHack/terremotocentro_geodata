@@ -55,6 +55,6 @@ Attualmente i file vengono scaricati manualmente dal sito di Copernicus, inserit
 
 Idealmente si potrebbe semplificare anche questa fase, attraverso l'automatizzazione del download dei dati.
 
-Il notebook	[EMSR190_scraping.ipynb](CopernicusEMS_autoDownMerge.ipynb) è stato creato a questo scopo, ma non ancora finalizzato.
+Il notebook	[CopernicusEMS_autoDownMerge.ipynb](CopernicusEMS_autoDownMerge.ipynb) è stato creato a questo scopo, ma non ancora finalizzato.
 
 Il suggerimento di [@aborruso](https://github.com/aborruso) suggerito nell'[issue 4](https://github.com/emergenzeHack/terremotocentro_geodata/issues/4) permette di risolvere la questione, ma non è stato ancora integrato.
